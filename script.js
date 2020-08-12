@@ -7,10 +7,10 @@ const slides = document.querySelectorAll('.slide'),
 let index = 0;
 
 function currentSlide(n) {
-    for (slide of slides) {
+    for (let slide of slides) {
         slide.classList.remove('active');
     }
-    for (dot of dots) {
+    for (let dot of dots) {
         dot.classList.remove('activeDot');
     }
     slides[n].classList.add('active');
@@ -42,7 +42,7 @@ prevBtn.addEventListener('click', prevSlide);
 
 document.addEventListener('click', event => {
     // console.log(event.target);
-    for (dot of dots)
+    for (let dot of dots) {
         if (event.target == dot) {
             for (let i = 0; i < dots.length; i++) {
                 if (dots[i] == dot) {
@@ -54,4 +54,5 @@ document.addEventListener('click', event => {
 
 
         }
-})
+    }
+});
